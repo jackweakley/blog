@@ -81,7 +81,7 @@
 
         %>
 
-        <p>There are no blog entries</p>
+        <p>There are no blog entries.</p>
 
         <%
 
@@ -94,48 +94,34 @@
         <%
 
         for (Greeting greeting : greetings) {
-			
-        	pageContext.setAttribute("greeting_title",
-					 				 greeting.getTitle());
         	
+        	pageContext.setAttribute("greeting_title",
+        							 greeting.getTitle());
+
             pageContext.setAttribute("greeting_content",
 
                                      greeting.getContent());
-            
+            pageContext.setAttribute("greeting_date",
+            						 greeting.getDate().toString());
 
-            if (greeting.getUser() == null) {
-
-                %>
-
-                <p>An anonymous person wrote:</p>
-
-                <%
-
-            } else {
-
-                pageContext.setAttribute("greeting_user",
+            pageContext.setAttribute("greeting_user",
 
                                          greeting.getUser());
 
                 %>
 
-                <p><b>${fn:escapeXml(greeting_user.nickname)}</b> wrote:</p>
-
-                <%
-
-            }
-
-            %>
-			<blockquote><b>${fn:escapeXml(greeting_title)}</b></blockquote>
+            <p><b>(${fn:escapeXml(greeting_date)}) ${fn:escapeXml(greeting_user.nickname)}</b> wrote:</p>
+			<div class="title"><blockquote><b>${fn:escapeXml(greeting_title)}</b></blockquote></div>
             <blockquote>${fn:escapeXml(greeting_content)}</blockquote>
 
-            <%
+       <%
 
         }
 
     }
 
 %>
+
 
  
 
