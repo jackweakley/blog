@@ -81,7 +81,7 @@
 
         %>
 
-        <p>Guestbook '${fn:escapeXml(guestbookName)}' has no messages.</p>
+        <p>There are no blog entries</p>
 
         <%
 
@@ -89,7 +89,7 @@
 
         %>
 
-        <p>Messages in Guestbook '${fn:escapeXml(guestbookName)}'.</p>
+        <p>Blog Entries: </p>
 
         <%
 
