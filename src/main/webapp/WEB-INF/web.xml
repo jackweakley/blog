@@ -66,6 +66,6 @@
 	</filter-mapping>
 	
   <welcome-file-list>
-    <welcome-file>ofyguestbook.jsp</welcome-file>
+    <welcome-file>gb.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

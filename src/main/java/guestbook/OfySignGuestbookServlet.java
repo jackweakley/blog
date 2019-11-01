@@ -64,16 +64,18 @@ public class OfySignGuestbookServlet extends HttpServlet {
         // Guestbook should be limited to ~1/second.
 
         String guestbookName = req.getParameter("guestbookName");
+        
+        String title = req.getParameter("title");
 
         String content = req.getParameter("content");
 
-        Greeting greeting = new Greeting(user, content, guestbookName);
+        Greeting greeting = new Greeting(user, title, content, guestbookName);
 
         ofy().save().entity(greeting).now();
 
  
 
-        resp.sendRedirect("/ofyguestbook.jsp?guestbookName=" + guestbookName);
+        resp.sendRedirect("/gb.jsp?guestbookName=" + guestbookName);
 
     }
 
