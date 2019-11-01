@@ -10,7 +10,7 @@
 
       		<div>
       			Title:<input type="text" name="title" size="20"/>
-      			<hr width="1200">
+      			<hr width="1920">
       			Content:<input type="text" name="content" size="90"/>
       		</div>
 			<br>

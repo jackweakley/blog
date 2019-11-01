@@ -41,7 +41,7 @@ public class SendEmailServlet extends HttpServlet {
 			emails.add(email.getEmail());
 		}
 		for(Greeting greeting : greetings) {
-			if(greeting.getDate().before(aDayAgo))
+			if(greeting.getDate().after(aDayAgo))
 				recentGreetings.add(greeting);
 		}
 		
