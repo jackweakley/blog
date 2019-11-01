@@ -1,6 +1,10 @@
 
  body {
-   font-family: Verdana, Helvetica, sans-serif;
-   background-color: #FFFFCC;
+   font-family: "Times New Roman", Times, serif;
+   background-color: #f9dff7;
+}
+
+h1 {
+	font-family: Zapf Chancery, cursive;
 }
 

@@ -42,6 +42,10 @@
 	<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
   </head>
 
+
+	<header>
+		<h1>This is a blog for people to express their feelings about dogs. </h1>
+	</header>
  
 
   <body>
@@ -107,6 +111,8 @@ to create new blog entries.</p>
     }
 
 %>
+
+  <img src="https://cdn.shopify.com/s/files/1/0028/1978/4763/articles/Puppy-care_1400x.progressive.jpg?v=1538555224" alt="Image not found"/> 
 
  <p>Click <a href="/allentries.jsp?guestbookName=${guestbookName}" >here</a> to view all blog entries</p>
  	
