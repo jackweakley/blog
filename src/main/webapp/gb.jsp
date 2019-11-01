@@ -92,7 +92,7 @@
 		}
 		else{
 			%>
-			Click <a href="/signemail?default">here</a> to subscribe to the daily digest		
+			Click <a href="/signemail?default">here</a> to subscribe to the daily digest	
 			<%
 		}
 
@@ -112,7 +112,7 @@ to create new blog entries.</p>
 
 %>
 
-  <img src="https://cdn.shopify.com/s/files/1/0028/1978/4763/articles/Puppy-care_1400x.progressive.jpg?v=1538555224" alt="Image not found"/> 
+ <p><img src="https://cdn.shopify.com/s/files/1/0028/1978/4763/articles/Puppy-care_1400x.progressive.jpg?v=1538555224" alt="Image not found" hspace="20"/></p>
 
  <p>Click <a href="/allentries.jsp?guestbookName=${guestbookName}" >here</a> to view all blog entries</p>
  	
@@ -136,7 +136,7 @@ to create new blog entries.</p>
 
         %>
 
-        <p>There are no blog entries.</p>
+        <p><div id="blogStart">There are no blog entries.</div></p>
 
         <%
 
@@ -144,7 +144,10 @@ to create new blog entries.</p>
 
         %>
 
-        <p>Blog Entries: </p>
+        <p><div id="blogStart">Blog Entries: </div></p>
+        
+		<div id="blogPosts">
+
 
         <%
 
@@ -172,6 +175,10 @@ to create new blog entries.</p>
        <%
 
         }
+        
+        %>
+        </div>
+        <%        
 
     }
 

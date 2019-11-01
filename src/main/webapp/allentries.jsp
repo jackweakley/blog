@@ -81,7 +81,7 @@
 
         %>
 
-        <p>There are no blog entries.</p>
+        <p><div id="blogStart">There are no blog entries.</div></p>
 
         <%
 
@@ -89,7 +89,9 @@
 
         %>
 
-        <p>Blog Entries: </p>
+        <p><div id="blogStart">Blog Entries: </div></p>
+        
+        <div id="blogPosts">
 
         <%
 
@@ -117,6 +119,10 @@
        <%
 
         }
+        
+        %>
+        </div>
+        <% 
 
     }
 
