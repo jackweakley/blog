@@ -52,8 +52,10 @@ public class SendEmailServlet extends HttpServlet {
 				+ greeting.getTitle() + "\nContent: " + greeting.getContent() + "\n\n");
 		}
 		
+		if(recentGreetings.size() != 0) {
+			sendEmail("jackweakley1@gmail.com", emails, "Daily Digest", sb.toString());
+		}
 		
-		sendEmail("jackweakley1@gmail.com", emails, "Daily Digest", sb.toString());
 
 	}
 
