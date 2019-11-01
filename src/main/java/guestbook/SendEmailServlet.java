@@ -29,16 +29,16 @@ public class SendEmailServlet extends HttpServlet {
 		long time = System.currentTimeMillis();
 		Date aDayAgo = new Date(time - 3600*24*1000);
 		
-		ObjectifyService.register(User.class);
+		ObjectifyService.register(UserEmail.class);
 		ObjectifyService.register(Greeting.class);
 		
-		List<User> users = ObjectifyService.ofy().load().type(User.class).list();
+		List<UserEmail> users = ObjectifyService.ofy().load().type(UserEmail.class).list();
 		List<String> emails = new ArrayList<>();
 		List<Greeting> greetings = ObjectifyService.ofy().load().type(Greeting.class).list();
 		List<Greeting> recentGreetings = new ArrayList<Greeting>();
 		
-		for(User user : users) {
-			emails.add(user.getEmail());
+		for(UserEmail email : users) {
+			emails.add(email.getEmail());
 		}
 		for(Greeting greeting : greetings) {
 			if(greeting.getDate().before(aDayAgo))

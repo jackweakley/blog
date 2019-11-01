@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class SignEmailListServlet extends HttpServlet{
 
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 
             throws IOException {
 		

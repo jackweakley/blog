@@ -16,7 +16,7 @@ import com.googlecode.objectify.ObjectifyService;
 
 public class UnsignEmailListServlet extends HttpServlet{
 
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 
             throws IOException {
 		
@@ -28,7 +28,7 @@ public class UnsignEmailListServlet extends HttpServlet{
 		    List<UserEmail> emails = ObjectifyService.ofy().load().type(UserEmail.class).list();
 		    for (UserEmail userEmail : emails) {
 		    	if (userEmail.getEmail().equals(user.getEmail())) {
-		    		ofy().delete().entity(user).now();
+		    		ofy().delete().entity(userEmail).now();
 		    		break;
 		    	}
 		    		

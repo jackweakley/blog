@@ -17,7 +17,9 @@ public class UserEmail {
 	
 	@Id Long id;
 	@Index String email;
-		
+	
+	public UserEmail() {}
+	
 	public UserEmail(User user) {
 		this.email = user.getEmail();
 	}

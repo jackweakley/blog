@@ -83,20 +83,12 @@
 <%
 		if(emailUsers.contains(user.getEmail())){
 			%>
-			Click <form action=/unsign method="post">
-				<div><input type="submit" value="here"/></div>
-				<input type="hidden" name="guestbookName" value="default" />
-			</form> 
-			to unsubscribe to the daily digest
+			Click <a href="/unsignemail?default">here</a> to unsubscribe to the daily digest
 			<%
 		}
 		else{
 			%>
-			Click <form action=/sign method="post">
-				<div><input type="submit" value="here"/></div>
-				<input type="hidden" name="guestbookName" value="default" />
-			</form> 
-			to subscribe to the daily digest			
+			Click <a href="/signemail?default">here</a> to subscribe to the daily digest		
 			<%
 		}
 
