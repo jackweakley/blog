@@ -3,6 +3,6 @@
 <cronentries>
 	<cron>
 		<url>/sendemail</url>
-		<schedule>every 2 minutes</schedule>
+		<schedule>every day 23:00</schedule>
 	</cron>
 </cronentries>
