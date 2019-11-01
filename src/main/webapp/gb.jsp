@@ -6,6 +6,8 @@
 
 <%@ page import="guestbook.Greeting" %>
 
+<%@ page import="guestbook.UserEmail" %>
+
 <%@ page import="com.google.appengine.api.users.User" %>
 
 <%@ page import="com.google.appengine.api.users.UserService" %>
@@ -61,7 +63,13 @@
     UserService userService = UserServiceFactory.getUserService();
 
     User user = userService.getCurrentUser();
-
+    
+    ObjectifyService.register(UserEmail.class);
+    List<UserEmail> emailUsersTemp = ObjectifyService.ofy().load().type(UserEmail.class).list();
+	List<String> emailUsers = new ArrayList<>();
+    for(UserEmail userEmail : emailUsersTemp)
+    	emailUsers.add(userEmail.getEmail());
+    
     if (user != null) {
 
       pageContext.setAttribute("user", user);
@@ -73,6 +81,24 @@
 <a href="<%= userService.createLogoutURL(request.getRequestURI()) %>">sign out</a> or <a href="/blogpost.jsp">create a new entry</a>)</p>
 
 <%
+		if(emailUsers.contains(user.getEmail())){
+			%>
+			Click <form action=/unsign method="post">
+				<div><input type="submit" value="here"/></div>
+				<input type="hidden" name="guestbookName" value="default" />
+			</form> 
+			to unsubscribe to the daily digest
+			<%
+		}
+		else{
+			%>
+			Click <form action=/sign method="post">
+				<div><input type="submit" value="here"/></div>
+				<input type="hidden" name="guestbookName" value="default" />
+			</form> 
+			to subscribe to the daily digest			
+			<%
+		}
 
     } else {
 
@@ -91,6 +117,7 @@ to create new blog entries.</p>
 %>
 
  <p>Click <a href="/allentries.jsp?guestbookName=${guestbookName}" >here</a> to view all blog entries</p>
+ 	
 
 <%
 

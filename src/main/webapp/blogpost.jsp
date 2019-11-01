@@ -13,7 +13,7 @@
       			<hr width="1200">
       			Content:<input type="text" name="content" size="90"/>
       		</div>
-
+			<br>
       		<div><input type="submit" value="Post Entry" /></div>
 
       		<input type="hidden" name="guestbookName" value="default"/>

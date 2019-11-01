@@ -49,6 +49,50 @@
 
     </servlet-mapping>
     
+     <servlet>
+        <servlet-name>signemail</servlet-name>
+
+        <servlet-class>guestbook.SignEmailListServlet</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>signemail</servlet-name>
+
+        <url-pattern>/signemail</url-pattern>
+
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>unsignemail</servlet-name>
+
+        <servlet-class>guestbook.UnsignEmailListServlet</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>unsignemail</servlet-name>
+
+        <url-pattern>/unsignemail</url-pattern>
+
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>sendemail</servlet-name>
+
+        <servlet-class>guestbook.SendEmailServlet</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>sendemail</servlet-name>
+
+        <url-pattern>/sendemail</url-pattern>
+
+    </servlet-mapping>
     <filter>
 
         <filter-name>ObjectifyFilter</filter-name>
