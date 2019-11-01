@@ -82,7 +82,7 @@
 
 <p>Hello, ${fn:escapeXml(user.nickname)}! (You can
 
-<a href="<%= userService.createLogoutURL(request.getRequestURI()) %>">sign out</a> or <a href="/blogpost.jsp">create a new entry</a>)</p>
+<a href="<%= userService.createLogoutURL(request.getRequestURI()) %>">sign out</a>)</p>
 
 <%
 		if(emailUsers.contains(user.getEmail())){
@@ -136,15 +136,16 @@ to create new blog entries.</p>
 
         %>
 
-        <p><div id="blogStart">There are no blog entries.</div></p>
-
+        <div id="blogStart">There are no blog entries.</div>
+		<a href="/blogpost.jsp">create a new entry</a>
         <%
 
     } else {
 
         %>
 
-        <p><div id="blogStart">Blog Entries: </div></p>
+        <div id="blogStart">Blog Entries: </div>
+        <a href="/blogpost.jsp">create a new entry</a>
         
 		<div id="blogPosts">
 
